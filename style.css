@@ -1,40 +1,50 @@
-html, body{
-  margin: 0px;
-  padding: 0px;
+html, body {
+    margin: 0px;
+    padding: 0px;
 }
 
-/*
-Style the element with id="camera", "camera-view", "camera-device", "photo-display"
-*/
-#camera, #camera-view, #camera-device, #photo-display{
-    position: fixed; /* Position of element is relative to the viewport */
-    object-fit: contain; /* The content is scaled to maintain its aspect ratio while fitting within the element's content box */
+#camera, #camera-view, #camera-device, #photo-display {
+    position: fixed;
+    object-fit: contain;
     height: 100%;
     width: 100%;
 }
 
-/*
-Style the element with id="take-photo-button"
-*/
-#take-photo-button{
+#camera-view, #camera-device, #photo-display {
+    transform: scaleX(-1);
+}
+
+#take-photo-button {
     position: fixed;
     bottom: 30px;
-    width: 100%;
+    width: 300px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    border: 3px solid red;
+    padding: 15px 20px;
+    text-align: center;
+    left: calc(50% - 150px);
 }
 
-/*
-Style the element with id="take-photo-button"
-*/
-#front-camera-button{
+#front-camera-button {
     position: fixed;
     bottom: 80px;
-    width: 100%;
+    width: 300px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    border: 3px solid red;
+    padding: 15px 20px;
+    text-align: center;
+    left: calc(50% - 150px);
 }
 
-/*
-Class "photo-taken", which is added to "cameraOutput" in file "app.js"
-*/
-.photo-taken{
-    height: 100px!important; /* !important => Overrides the predefined height property (e.g., 100%) */
-    width: 100px!important; /* !important => Overrides the predefined width property (e.g., 100%) */
+.photo-taken {
+    height: 100px!important;
+    width: 100px!important;
+    top: 20px;
+    right: 20px;
 }
