@@ -3,60 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Advanced Camera Mobile Website</title>
+    <title>Camera Mobile Website</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Add Material Icons for better UI -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <main id="camera">
-        <div class="camera-container">
-            <canvas id="camera-view"></canvas>
-            <video id="camera-device" autoplay playsinline></video>
-            <img alt="Captured photo" id="photo-display">
-            
-            <!-- Loading spinner -->
-            <div id="loading-spinner">
-                <div class="spinner"></div>
-                <p>Loading camera...</p>
-            </div>
-
-            <!-- Error message -->
-            <div id="error-message" class="hidden">
-                <span class="material-icons">error</span>
-                <p></p>
-                <button id="retry-button">Retry</button>
-            </div>
-        </div>
-
-        <div class="controls">
-            <button id="front-camera-button" class="control-button">
-                <span class="material-icons">flip_camera_ios</span>
-                <span class="button-text">Front Camera</span>
-            </button>
-            
-            <button id="take-photo-button" class="control-button">
-                <div class="capture-button"></div>
-            </button>
-
-            <button id="gallery-button" class="control-button hidden">
-                <span class="material-icons">collections</span>
-                <span class="button-text">Gallery</span>
-            </button>
-        </div>
-
-        <!-- Gallery modal -->
-        <div id="gallery-modal" class="hidden">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>Gallery</h2>
-                    <button id="close-gallery" class="modal-close">
-                        <span class="material-icons">close</span>
-                    </button>
-                </div>
-                <div id="photos-container"></div>
-            </div>
-        </div>
+        <canvas id="camera-view"></canvas>
+        <video id="camera-device" autoplay playsinline></video>
+        <img alt="" id="photo-display">
+        <button id="front-camera-button">Front Camera</button>
+        <button id="take-photo-button">Take Photo</button>
     </main>
     <script src="app.js"></script>
 </body>
